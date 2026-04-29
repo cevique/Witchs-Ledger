@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦋 Umineko Study Tracker
+# 🦋 Witch's Ledger
 
 ### *When the seagulls cry, they are crying over your unfinished past papers.*
 
