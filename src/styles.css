@@ -1,0 +1,199 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Umineko-inspired design system.
+ * Palette: gold (#d4af37-ish), crimson red, deep sapphire blue, royal purple,
+ * with stark black/white minimalist surfaces.
+ * All colors in oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-crimson: var(--crimson);
+  --color-crimson-foreground: var(--crimson-foreground);
+  --color-sapphire: var(--sapphire);
+  --color-sapphire-foreground: var(--sapphire-foreground);
+  --color-violet: var(--violet);
+  --color-violet-foreground: var(--violet-foreground);
+
+  --color-chart-1: var(--gold);
+  --color-chart-2: var(--crimson);
+  --color-chart-3: var(--sapphire);
+  --color-chart-4: var(--violet);
+  --color-chart-5: var(--muted-foreground);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-display: "Cormorant Garamond", "Cormorant", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Minimalist light: near-white with crimson primary */
+  --background: oklch(0.99 0.003 80);
+  --foreground: oklch(0.18 0.02 280);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 280);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 280);
+
+  --primary: oklch(0.46 0.21 27);          /* crimson */
+  --primary-foreground: oklch(0.99 0.005 80);
+  --secondary: oklch(0.95 0.01 80);
+  --secondary-foreground: oklch(0.18 0.02 280);
+  --muted: oklch(0.96 0.005 80);
+  --muted-foreground: oklch(0.45 0.02 280);
+  --accent: oklch(0.93 0.03 85);
+  --accent-foreground: oklch(0.25 0.05 30);
+  --destructive: oklch(0.55 0.24 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.01 80);
+  --input: oklch(0.9 0.01 80);
+  --ring: oklch(0.46 0.21 27);
+
+  --gold: oklch(0.78 0.14 85);
+  --gold-foreground: oklch(0.2 0.04 60);
+  --crimson: oklch(0.46 0.21 27);
+  --crimson-foreground: oklch(0.99 0 0);
+  --sapphire: oklch(0.42 0.18 260);
+  --sapphire-foreground: oklch(0.99 0 0);
+  --violet: oklch(0.45 0.2 305);
+  --violet-foreground: oklch(0.99 0 0);
+
+  --gradient-umineko: linear-gradient(135deg, var(--crimson) 0%, var(--violet) 50%, var(--sapphire) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.85 0.15 85) 0%, oklch(0.65 0.16 60) 100%);
+  --shadow-elegant: 0 10px 30px -10px color-mix(in oklab, var(--crimson) 25%, transparent);
+  --shadow-gold: 0 0 30px -5px color-mix(in oklab, var(--gold) 50%, transparent);
+
+  --sidebar: oklch(0.98 0.005 80);
+  --sidebar-foreground: oklch(0.18 0.02 280);
+  --sidebar-primary: oklch(0.46 0.21 27);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.94 0.01 80);
+  --sidebar-accent-foreground: oklch(0.18 0.02 280);
+  --sidebar-border: oklch(0.9 0.01 80);
+  --sidebar-ring: oklch(0.46 0.21 27);
+}
+
+.dark {
+  /* Dark Umineko: deep near-black with gold + crimson + sapphire + violet accents */
+  --background: oklch(0.13 0.015 280);
+  --foreground: oklch(0.96 0.01 80);
+  --card: oklch(0.17 0.02 280);
+  --card-foreground: oklch(0.96 0.01 80);
+  --popover: oklch(0.17 0.02 280);
+  --popover-foreground: oklch(0.96 0.01 80);
+
+  --primary: oklch(0.78 0.14 85);          /* gold leads in dark */
+  --primary-foreground: oklch(0.15 0.02 60);
+  --secondary: oklch(0.22 0.03 280);
+  --secondary-foreground: oklch(0.96 0.01 80);
+  --muted: oklch(0.21 0.02 280);
+  --muted-foreground: oklch(0.7 0.02 80);
+  --accent: oklch(0.28 0.06 30);
+  --accent-foreground: oklch(0.96 0.01 80);
+  --destructive: oklch(0.6 0.23 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.3 0.03 280);
+  --input: oklch(0.25 0.03 280);
+  --ring: oklch(0.78 0.14 85);
+
+  --gold: oklch(0.82 0.15 85);
+  --gold-foreground: oklch(0.15 0.02 60);
+  --crimson: oklch(0.58 0.23 27);
+  --crimson-foreground: oklch(0.99 0 0);
+  --sapphire: oklch(0.55 0.2 260);
+  --sapphire-foreground: oklch(0.99 0 0);
+  --violet: oklch(0.58 0.22 305);
+  --violet-foreground: oklch(0.99 0 0);
+
+  --gradient-umineko: linear-gradient(135deg, var(--crimson) 0%, var(--violet) 50%, var(--sapphire) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.85 0.16 90) 0%, oklch(0.62 0.17 55) 100%);
+  --shadow-elegant: 0 10px 40px -10px color-mix(in oklab, var(--gold) 30%, transparent);
+  --shadow-gold: 0 0 40px -5px color-mix(in oklab, var(--gold) 60%, transparent);
+
+  --sidebar: oklch(0.15 0.02 280);
+  --sidebar-foreground: oklch(0.96 0.01 80);
+  --sidebar-primary: oklch(0.78 0.14 85);
+  --sidebar-primary-foreground: oklch(0.15 0.02 60);
+  --sidebar-accent: oklch(0.22 0.03 280);
+  --sidebar-accent-foreground: oklch(0.96 0.01 80);
+  --sidebar-border: oklch(0.3 0.03 280);
+  --sidebar-ring: oklch(0.78 0.14 85);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility bg-umineko {
+  background-image: var(--gradient-umineko);
+}
+@utility bg-gold-gradient {
+  background-image: var(--gradient-gold);
+}
+@utility text-gold-gradient {
+  background-image: var(--gradient-gold);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+@utility shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
