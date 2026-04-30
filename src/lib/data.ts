@@ -9,7 +9,7 @@ export const ENTRY_TESTS: EntryTest[] = [
   { id: "giki", name: "GIKI", fullName: "GIKI Entry Test", blurb: "Ghulam Ishaq Khan Institute" },
   { id: "nust", name: "NUST", fullName: "NET (NUST Entry Test)", blurb: "National University of Sciences & Technology" },
   { id: "pieas", name: "PIEAS", fullName: "PIEAS Entry Test", blurb: "Pakistan Institute of Engineering & Applied Sciences" },
-  { id: "tcat", name: "TCAT", fullName: "TCAT (Topi)", blurb: "Talent Common Admission Test" },
+  { id: "tcat", name: "TCAT", fullName: "TCAT (UET Taxilla)", blurb: "Taxila Competency Assessment Test" },
   { id: "fast", name: "FAST-NU", fullName: "FAST NU Entry Test", blurb: "National University of Computer & Emerging Sciences" },
   { id: "air", name: "Air", fullName: "Air University Entry Test", blurb: "Air University Islamabad" },
   { id: "usat", name: "USAT", fullName: "USAT", blurb: "Undergraduate Studies Admission Test" },
