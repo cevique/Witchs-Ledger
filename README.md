@@ -40,7 +40,7 @@ Track preparation for all major Pakistani university entry tests:
 | **PIEAS** | Pakistan Institute of Engineering & Applied Sciences |
 | **FAST-NU** | FAST National University |
 | **Air** | Air University |
-| **USAT** | University of Science & Arts in Technology |
+| **USAT** | Undergraduate Studies Admission Test |
 | **SAT** | Scholastic Assessment Test |
 | **IELTS** | International English Language Testing System |
 | **TCAT** | Taxila Competency Assessment Test (sometimes referred to as the UET Taxila Entry Test) |
